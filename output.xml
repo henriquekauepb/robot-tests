@@ -1,86 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.13.14 on win32)" generated="2026-08-12T16:47:48.482747" rpa="false" schemaversion="5">
-<suite id="s1" name="Form" source="C:\Users\henrique.malaquias\Documents\Robot\form.robot">
-<test id="s1-t1" name="Cenário 1: Preencher formulário" line="33">
-<kw name="Acessar site">
+<robot generator="Robot 7.4.2 (Python 3.13.14 on win32)" generated="2026-09-02T15:14:36.131272" rpa="false" schemaversion="5">
+<suite id="s1" name="Primeiro-Cenario" source="C:\Users\henrique.malaquias\Documents\Robot\primeiro-cenario.robot">
+<test id="s1-t1" name="CT01 - Efetuar login com sucesso" line="25">
+<kw name="Preencher os dados de login">
+<kw name="Abrir navegador">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-08-12T16:47:48.764332" level="INFO">Opening browser 'chrome' to base url 'https://www.way2automation.com/practicesite/#forms'.</msg>
-<arg>https://www.way2automation.com/practicesite/#forms</arg>
-<arg>chrome</arg>
+<msg time="2026-09-02T15:14:36.412217" level="INFO">Opening browser 'chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>browser=chrome</arg>
+<arg>url=https://practicetestautomation.com/practice-test-login/</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-08-12T16:47:48.764104" elapsed="2.435748"/>
+<status status="PASS" start="2026-09-02T15:14:36.412034" elapsed="2.432486"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-08-12T16:47:51.200238" elapsed="0.038707"/>
-</kw>
-<kw name="Set Window Size" owner="SeleniumLibrary">
-<arg>1920</arg>
-<arg>1080</arg>
-<doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2026-08-12T16:47:51.239138" elapsed="0.372886"/>
-</kw>
-<status status="PASS" start="2026-08-12T16:47:48.763550" elapsed="2.848725"/>
-</kw>
-<kw name="Preencher campos">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-08-12T16:47:51.613996" level="INFO">Typing text 'Henrique' into text field '//input[@id="full-name"]'.</msg>
-<arg>${input_fullName}</arg>
-<arg>Henrique</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-12T16:47:51.613409" elapsed="0.078823"/>
+<status status="PASS" start="2026-09-02T15:14:36.411515" elapsed="2.433258"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-08-12T16:47:51.692772" level="INFO">Typing text 'senha1234' into text field 'id:password'.</msg>
-<arg>${input_password}</arg>
-<arg>senha1234</arg>
+<msg time="2026-09-02T15:14:38.845664" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
+<arg>locator=${username}</arg>
+<arg>text=student</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-12T16:47:51.692437" elapsed="0.048293"/>
+<status status="PASS" start="2026-09-02T15:14:38.845062" elapsed="0.066847"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-08-12T16:47:51.741131" level="INFO">Typing text 'teste@teste.com' into text field 'id:email'.</msg>
-<arg>${input_email}</arg>
-<arg>teste@teste.com</arg>
+<msg time="2026-09-02T15:14:38.913244" level="INFO">Typing text 'Password123' into text field 'id:password'.</msg>
+<arg>locator=${password}</arg>
+<arg>text=Password123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-12T16:47:51.740888" elapsed="0.051334"/>
+<status status="PASS" start="2026-09-02T15:14:38.912226" elapsed="0.055508"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-08-12T16:47:51.793170" level="INFO">Typing text 'Teste de Automação Robot' into text field 'id:notes'.</msg>
-<arg>${textarea_notes}</arg>
-<arg>Teste de Automação Robot</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-12T16:47:51.792479" elapsed="0.144728"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-02T15:14:38.968114" level="INFO">Clicking button '//button[@id="submit"]'.</msg>
+<arg>locator=//button[@id="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-02T15:14:38.967896" elapsed="0.751670"/>
 </kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2026-08-12T16:47:51.938056" level="INFO">Selecting options from selection list 'id:tool' by label Robot Framework.</msg>
-<arg>${select_tool}</arg>
-<arg>Robot Framework</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2026-08-12T16:47:51.937636" elapsed="0.069710"/>
+<status status="PASS" start="2026-09-02T15:14:36.411232" elapsed="3.308492"/>
 </kw>
-<status status="PASS" start="2026-08-12T16:47:51.612977" elapsed="0.394511"/>
+<kw name="Verificar se houve o redirecionamento para a página de login com sucesso">
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-09-02T15:14:39.724938" level="INFO">Current location contains 'practicetestautomation.com/logged-in-successfully/'.</msg>
+<arg>expected=practicetestautomation.com/logged-in-successfully/</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-09-02T15:14:39.720486" elapsed="0.004560"/>
 </kw>
-<kw name="Clicar em submit">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>//button[@data-testid="practice-submit"]</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-08-12T16:47:52.008112" elapsed="0.288190"/>
+<status status="PASS" start="2026-09-02T15:14:39.720174" elapsed="0.004968"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-12T16:47:52.297170" level="INFO">Clicking element '//button[@data-testid="practice-submit"]'.</msg>
-<arg>//button[@data-testid="practice-submit"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-12T16:47:52.296715" elapsed="0.043928"/>
+<kw name="Verificar se a mensagem de login com sucesso foi exibida">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-09-02T15:14:39.742020" level="INFO">Current page contains text 'Logged In Successfully'.</msg>
+<arg>Logged In Successfully</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-09-02T15:14:39.725967" elapsed="0.016135"/>
 </kw>
-<status status="PASS" start="2026-08-12T16:47:52.007844" elapsed="0.332927"/>
+<status status="PASS" start="2026-09-02T15:14:39.725665" elapsed="0.016516"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-08-12T16:47:52.341111" elapsed="2.217962"/>
-</kw>
-<status status="PASS" start="2026-08-12T16:47:48.762848" elapsed="5.796826"/>
+<status status="PASS" start="2026-09-02T15:14:36.410415" elapsed="3.332068"/>
 </test>
-<status status="PASS" start="2026-08-12T16:47:48.484164" elapsed="6.077097"/>
+<status status="PASS" start="2026-09-02T15:14:36.133404" elapsed="3.609869"/>
 </suite>
 <statistics>
 <total>
@@ -89,7 +64,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Form" id="s1" pass="1" fail="0" skip="0">Form</stat>
+<stat name="Primeiro-Cenario" id="s1" pass="1" fail="0" skip="0">Primeiro-Cenario</stat>
 </suite>
 </statistics>
 <errors>

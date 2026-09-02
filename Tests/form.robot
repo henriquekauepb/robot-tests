@@ -7,6 +7,7 @@ ${input_password}      id:password
 ${input_email}         id:email
 ${select_tool}         id:tool
 ${textarea_notes}      id:notes
+${username}            name:matricula
 
 *** Keywords ***
 Acessar site
