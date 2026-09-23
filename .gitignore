@@ -1,4 +1,5 @@
-results/
-output.xml
-report.html
-log.html
+.env
+ venv/
+ log.html
+ report.html
+ allure-results/
